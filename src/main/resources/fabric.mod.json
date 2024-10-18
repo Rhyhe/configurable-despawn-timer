@@ -1,42 +1,38 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "config_despawn",
   "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Configurable Item Despawn",
+  "description": "Adds an option to change how long it takes an item to despawn.",
   "authors": [
-    "Turnip Labs"
+    "Rhyhe"
   ],
   "contact": {
     "homepage": "",
     "sources": ""
   },
-
-	"icon": "icon.png",
+  "icon": "icon.png",
   "license": "CC0-1.0",
-
   "environment": "*",
   "entrypoints": {
     "main": [
-			"turniplabs.examplemod.ExampleMod"
+      "rhyhe.config_despawn.ConfigDespawn"
     ],
-		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
-		],
-		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
-		],
-		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
-		]
-	},
+    "beforeGameStart": [
+      "rhyhe.config_despawn.ConfigDespawn"
+    ],
+    "afterGameStart": [
+      "rhyhe.config_despawn.ConfigDespawn"
+    ],
+    "recipesReady": [
+      "rhyhe.config_despawn.ConfigDespawn"
+    ]
+  },
   "mixins": [
-      "examplemod.mixins.json"
+    "config_despawn.mixins.json"
   ],
-
   "depends": {
-		"minecraft": "^7.2-beta",
+    "minecraft": "^7.2-beta",
     "fabricloader": ">=0.15.5"
   },
   "suggests": {
