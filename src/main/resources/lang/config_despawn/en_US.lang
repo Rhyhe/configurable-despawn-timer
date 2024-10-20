@@ -1,0 +1,2 @@
+options.despawnTimer = DespawnTimer
+gui.options.page.general.category.config_despawn = Configurable Despawn Timer

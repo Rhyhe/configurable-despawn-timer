@@ -4,7 +4,8 @@
   "package": "rhyhe.config_despawn.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "EntityItemMixin"
+    "EntityItemMixin",
+    "GameSettingsMixin"
   ],
   "client": [
   ],
