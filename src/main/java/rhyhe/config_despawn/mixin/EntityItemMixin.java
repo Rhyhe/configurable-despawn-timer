@@ -26,7 +26,7 @@ public abstract class EntityItemMixin
             //not actually sure what happens if age is saved as a number > Short.MAX.
             if (age >= Short.MAX_VALUE - 1)
             {
-                age -= 7200;
+                age -= 7192;
                 /*
                     The doRender() method in the ItemEntityRenderer class has these two lines:
                     float bobbingOffset = MathHelper.sin(((float)entity.age + partialTick) / 10.0f + entity.initialRotation) * 0.1f + 0.1f;
@@ -35,7 +35,7 @@ public abstract class EntityItemMixin
                     bobbing Offset has a period of 20pi, or ~62 age ticks
                     f3 has the longer period of 7200 age ticks to go from 0 to 360 degrees
 
-                    Since 62 is close enough to being a multiple of 7200 I just need to subtract age by that amount
+                    Since the closest multiple of 62 to 7200 is 7192 I just need to subtract age by that amount
                     so there is as minimal a "jump" in rendering as possible
 
                     aren't hacks the best?
@@ -47,7 +47,6 @@ public abstract class EntityItemMixin
     @ModifyConstant(method = "tick", constant = @Constant(intValue = 6000))
     private int configDespawn_getCustomMaxAge(int old)
     {
-        System.out.println((short) (ConfigDespawn.configDespawnTimer.value * Short.MAX_VALUE));
         return (short) (ConfigDespawn.configDespawnTimer.value * Short.MAX_VALUE);
     }
 
