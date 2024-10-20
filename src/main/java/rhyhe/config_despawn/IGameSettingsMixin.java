@@ -1,8 +1,8 @@
 package rhyhe.config_despawn;
 
-import net.minecraft.client.option.IntegerOption;
+import net.minecraft.client.option.FloatOption;
 
 public interface IGameSettingsMixin
 {
-    IntegerOption getConfigDespawnTimer();
+    FloatOption getConfigDespawnTimer();
 }

@@ -13,7 +13,6 @@ public abstract class EntityItemMixin
     @ModifyConstant(method = "tick", constant = @Constant(intValue = 6000))
     private int getCustomMaxAge(int old)
     {
-        System.out.println("Max Age Ticks: " + (short) (ConfigDespawn.configDespawnTimer.value * Short.MAX_VALUE));
         return (short) (ConfigDespawn.configDespawnTimer.value * Short.MAX_VALUE);
     }
 
