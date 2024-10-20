@@ -28,6 +28,9 @@ public abstract class GameSettingsMixin implements IGameSettingsMixin
                 float value = floatOption.value;
                 if (value == 0)
                 {
+                    cir.setReturnValue("Instant");
+                } else if (value == 1)
+                {
                     cir.setReturnValue("+Inf");
                 } else
                 {
