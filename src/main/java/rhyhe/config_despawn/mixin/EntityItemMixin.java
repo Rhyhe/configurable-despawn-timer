@@ -17,6 +17,12 @@ public abstract class EntityItemMixin
     @Shadow
     public int age;
 
+//    @Inject(method = "<init>(Lnet/minecraft/core/world/World;DDDLnet/minecraft/core/item/ItemStack;)V", at = @At(value = "TAIL"), remap = false)
+//    public void configDespawn_init(CallbackInfo ci)
+//    {
+//        age = Short.MAX_VALUE - 20;
+//    }
+
     @Inject(method = "tick", at = @At(value = "TAIL"), remap = false)
     public void configDespawn_tick(CallbackInfo ci)
     {
