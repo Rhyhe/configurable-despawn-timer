@@ -1,2 +1,5 @@
-options.despawnTimer = DespawnTimer
 gui.options.page.general.category.config_despawn = Configurable Despawn Timer
+gui.options.page.configurable_item_despawn.title = Despawn Timer
+options.despawntimer = Despawn Timer
+options.despawnTimer.min = Instant
+options.despawnTimer.max = Infinity

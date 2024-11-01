@@ -29,7 +29,7 @@ public abstract class EntityItemMixin
         if (ConfigDespawn.configDespawnTimer.value == 1)
         {
             //need to keep age near short limit of 2^15 - 1 (32,767) since it is saved as a short
-            //not actually sure what happens if age is saved as a number > Short.MAX.
+            //otherwise the number will be cut halfway when saved and when loaded in as a different age that is < Short.MAX_VALUE
             if (age >= Short.MAX_VALUE - 1)
             {
                 age -= 7192;
@@ -57,3 +57,4 @@ public abstract class EntityItemMixin
     }
 
 }
+

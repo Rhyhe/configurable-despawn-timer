@@ -4,9 +4,12 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.options.components.FloatOptionComponent;
 import net.minecraft.client.gui.options.components.OptionsCategory;
+import net.minecraft.client.gui.options.data.OptionsPage;
 import net.minecraft.client.gui.options.data.OptionsPages;
 import net.minecraft.client.option.FloatOption;
 import net.minecraft.client.option.GameSettings;
+import net.minecraft.core.block.Block;
+import net.minecraft.core.item.ItemStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.util.GameStartEntrypoint;
@@ -39,7 +42,7 @@ public class ConfigDespawn implements ModInitializer, GameStartEntrypoint, Recip
         configDespawnTimer = configDespawnTimer_local;
         FloatOptionComponent comp = new FloatOptionComponent(configDespawnTimer_local);
         OptionsCategory category = new OptionsCategory("gui.options.page.general.category.config_despawn").withComponent(comp);
-        OptionsPages.GENERAL.withComponent(category);
+        OptionsPages.register(new OptionsPage("gui.options.page.configurable_item_despawn.title", new ItemStack(Block.sand))).withComponent(category);
     }
 
     @Override
@@ -50,6 +53,5 @@ public class ConfigDespawn implements ModInitializer, GameStartEntrypoint, Recip
     @Override
     public void initNamespaces()
     {
-
     }
 }

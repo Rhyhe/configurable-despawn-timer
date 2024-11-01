@@ -3,7 +3,7 @@
   "id": "config_despawn",
   "version": "${version}",
   "name": "Configurable Item Despawn",
-  "description": "Adds an option to change how long it takes an item to despawn.",
+  "description": "Adds an option in settings to configure an item's despawn timer.",
   "authors": [
     "Rhyhe"
   ],
