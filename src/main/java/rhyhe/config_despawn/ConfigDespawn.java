@@ -24,7 +24,7 @@ public class ConfigDespawn implements ModInitializer, GameStartEntrypoint, Recip
     @Override
     public void onInitialize()
     {
-        LOGGER.info("Config_Despawn initialized.");
+        LOGGER.info("Configurable Item Despawn initialized.");
     }
 
     @Override
