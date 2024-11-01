@@ -5,3 +5,5 @@ out/
 run/
 run-server/
 notes/
+jitpack.yml
+.editorconfig
