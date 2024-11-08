@@ -37,10 +37,8 @@ public class ConfigDespawn implements ModInitializer, GameStartEntrypoint, Recip
     {
         Minecraft mc = Minecraft.getMinecraft(this);
         GameSettings gameSettings = mc.gameSettings;
-        FloatOption configDespawnTimer_local = ((IGameSettingsMixin) gameSettings).getConfigDespawnTimer();
-        // just make sure local version stays local and couldn't somehow be changed by something else
-        configDespawnTimer = configDespawnTimer_local;
-        FloatOptionComponent comp = new FloatOptionComponent(configDespawnTimer_local);
+        configDespawnTimer = ((IGameSettingsMixin) gameSettings).getConfigDespawnTimer();
+        FloatOptionComponent comp = new FloatOptionComponent(configDespawnTimer);
         OptionsCategory category = new OptionsCategory("gui.options.page.general.category.config_despawn").withComponent(comp);
         OptionsPages.register(new OptionsPage("gui.options.page.configurable_item_despawn.title", new ItemStack(Block.sand))).withComponent(category);
     }
